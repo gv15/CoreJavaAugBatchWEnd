@@ -43,8 +43,10 @@ public class Login extends JFrame {
 				JOptionPane.showMessageDialog(this, "Login SuccessFully");
 				this.setVisible(false);
 				this.dispose();
+				if(userDTO.getStatus=='F'){
 				ChangePassword cp = new ChangePassword(userDTO);
 				cp.setVisible(true);
+				}
 			}
 			else {
 				JOptionPane.showMessageDialog(this, "Invalid Userid or Password");
